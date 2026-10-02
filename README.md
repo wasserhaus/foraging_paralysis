@@ -63,11 +63,11 @@ The hornet load $V$ enters at exactly two places:
 | **Paralysis** | food intake $c \to c\,p(V)$ | $p(V) = e^{-\beta V}$, $\beta = 0.109$ |
 | **Predation** | forager mortality $m_0 \to m_0 + \mu(V)$ | $\mu = \nu\,p\,\mathrm{HF}(p)$, $\mathrm{HF}(p) = h_0 e^{-\zeta p}$ |
 
-![schema_bio](figs/schema_bio.png)
+![schema_bio](schema_bio.png)
 
 *The published model after Khoury et al. (2013), with the two hornet impacts in red.*
 
-![calibration](figs/calibration.png)
+![calibration](calibration.png)
 
 *Calibration: (a) flight activity against hornet load, (b) homing failure per return flight, (c) the resulting extra mortality, which never exceeds a quarter of a percent of the baseline.*
 
@@ -90,11 +90,11 @@ figure). The existence edge then sits near 17 hornets, still inside the range Re
 
 ### The existence band and the two ways to die
 
-![band](figs/band.png)
+![band](band.png)
 
 Positive equilibria exist exactly in the band $p^* < p < p_{\rm acc}$. They are locally stable (Routh–Hurwitz).
 
-![endstates](figs/endstates.png)
+![endstates](endstates.png)
 
 *(a) Below the existence edge the colony dies with honey left in the comb. (b) Under heavy paralysis the stores run out first.*
 
@@ -103,17 +103,17 @@ Global collapse below $p_E$ follows from an energy capital $W = f + a_\star(H+F)
 
 ### The food axis and bistability
 
-![axis3d](figs/axis3d.png)
+![axis3d](axis3d.png)
 
 In blow-up coordinates the extinct state becomes a curve that attracts below the critical store level $f_{\rm crit} \approx 313$ g and repels above it. The branch of equilibria collides with it at the existence edge.
 
-![basins](figs/basins.png)
+![basins](basins.png)
 
 Basins of attraction inside the band. $f_{\rm crit}$ decides the fate of tiny colonies only. Larger colonies survive with fewer stores.
 
 ### Paralysis against predation
 
-![pm](figs/pm.png)
+![pm](pm.png)
 
 (a) The hornet trajectory in the plane of flight activity $p$ and forager mortality $m$ runs almost horizontally: it moves the colony along the activity axis, not the mortality axis. (b) The same trajectory with the mortality axis stretched by $10^4$. Predation peaks near 17 hornets and then falls again because fewer bees fly.
 
