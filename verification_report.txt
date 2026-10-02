@@ -1,0 +1,554 @@
+Verification report -- Foraging Paralysis as a Collapse Mechanism
+generated 2026-10-01 19:56
+
+527 checks: 507 PASS, 9 DIFF, 0 FAIL, 11 INFO
+PASS = agrees to the printed digits (or stated tolerance); DIFF = numerical value differs; FAIL = qualitative claim not confirmed; INFO = documentation.
+
+--- Parameters, calibration and hornet functions (Ch. 3-4, App. A) ---
+[PASS] Notation           kappa = gB/phi [g]                                   thesis=0.1620       code=0.162 
+[PASS] Sec. 3.2.2         gB = 0.163 g / 9 d                                   thesis=0.018        code=0.018111111 
+[PASS] Eq. (5.19)         a_star = kappa + gA v / L [g]                        thesis=0.1795       code=0.1795 
+[PASS] Rem. 5.15          gA v / L [g]                                         thesis=0.0175       code=0.0175 
+[PASS] Rem. 5.15          L / v, bees reared per nurse-day                     thesis=0.4          code=0.4 
+[PASS] Rem. 5.15          m0 v / L, nurses per forager                         thesis=0.385        code=0.385 
+[PASS] Sec. 3.1.1         1/m0 [d]                                             thesis=6.49         code=6.4935065 
+[PASS] Sec. 3.3           c / gA, forager earns x her keep                     thesis=14           code=14.285714 
+[PASS] Sec. 3.3           kappa m0 [g/d]                                       thesis=0.025        code=0.024948 
+[PASS] App. A             k = gB/(gA phi)                                      thesis=23.1429      code=23.142857 
+[PASS] Sec. 3.3           critical death rate of the 2011 model                thesis=0.355        code=0.35519669 
+[PASS] Sec. 3.3           critical flightspan 1/0.355 [d]                      thesis=2.8          code=2.8169014 
+[PASS] Sec. 3.1           reversion above forager fraction amin/sigma          thesis=0.3333       code=0.33333333 
+[PASS] Eq. (B.1)          numerator sum V_i(-ln p_i)                           thesis=82.363       code=82.362878 
+[PASS] Eq. (B.1)          least-squares beta through origin                    thesis=0.1098       code=0.10981717 
+[PASS] Tab. B.1           pointwise beta at V=5                                thesis=0.1196       code=0.1195674 
+[PASS] Tab. B.1           pointwise beta at V=10                               thesis=0.1109       code=0.11086626 
+[PASS] Tab. B.1           pointwise beta at V=15                               thesis=0.1073       code=0.10729586 
+[PASS] Tab. B.1           pointwise beta at V=20                               thesis=0.1104       code=0.11036375 
+[PASS] Sec. 4.3.2         pointwise spread min                                 thesis=0.107        code=0.10729586 
+[PASS] Sec. 4.3.2         pointwise spread max                                 thesis=0.120        code=0.1195674 
+[DIFF] Tab. B.1           fit exp(-0.1098 V) at V=5                            thesis=0.577        code=0.57752705 (0.5775 -> 0.578)
+[PASS] Tab. B.1           fit exp(-0.1098 V) at V=10                           thesis=0.334        code=0.33353749 
+[PASS] Tab. B.1           fit exp(-0.1098 V) at V=15                           thesis=0.193        code=0.19262692 
+[PASS] Tab. B.1           fit exp(-0.1098 V) at V=20                           thesis=0.111        code=0.11124726 
+[PASS] Tab. B.2           pointwise zeta at p=0.1                              thesis=6.078        code=6.0778733 
+[PASS] Tab. B.2           pointwise zeta at p=0.2                              thesis=6.070        code=6.0696157 
+[PASS] Tab. B.2           pointwise zeta at p=0.3                              thesis=6.142        code=6.1417726 
+[PASS] Tab. B.2           pointwise zeta at p=0.4                              thesis=6.045        code=6.0447398 
+[PASS] Tab. B.2           pointwise zeta at p=0.5                              thesis=6.011        code=6.0113652 
+[DIFF] App. B.1           LS fit of ln HF: zeta                                thesis=6.03         code=6.0249564 (6.02496: rounds to 6.02, write 6.025)
+[PASS] App. B.1           LS fit of ln HF: prefactor [%]                       thesis=0.200        code=0.20031077 
+[PASS] Tab. B.2           fitted curve (unrounded) at p=0.0 [%]                thesis=0.200        code=0.20031077 
+[PASS] Tab. B.2           fitted curve (unrounded) at p=0.1 [%]                thesis=0.110        code=0.10965887 
+[PASS] Tab. B.2           fitted curve (unrounded) at p=0.2 [%]                thesis=0.060        code=0.060032058 
+[PASS] Tab. B.2           fitted curve (unrounded) at p=0.3 [%]                thesis=0.033        code=0.032864172 
+[PASS] Tab. B.2           fitted curve (unrounded) at p=0.4 [%]                thesis=0.018        code=0.017991284 
+[PASS] Tab. B.2           fitted curve (unrounded) at p=0.5 [%]                thesis=0.010        code=0.0098492153 
+[PASS] Sec. 4.3.3         zeta = 6.09 inside pointwise interval [6.01,6.14]    thesis=true         code=True 
+[PASS] Sec. 4.3.3         logit vs exponential differ by odds q/(1-q) <= 0.2004 % thesis=true         code=0.002004008 (exactly 0.2004 % at HF = 0.2 %: 'to within 0.2 %' is the safe wording)
+[PASS] Sec. 4.3.3         HF(0) [%]                                            thesis=0.20         code=0.2 
+[PASS] Sec. 4.3.3         HF(1)                                                thesis=4.5e-6       code=4.530818e-06 
+[INFO] Sec. 4.3.3         orders of magnitude HF(0)/HF(1)                      thesis=-            code=2.6448534 (thesis: between two and three)
+[PASS] Sec. 1.2           HF(0) = one flight in                                thesis=500          code=500 
+[PASS] Sec. 1.2           traffic falls by roughly an order of magnitude over 0-20 hornets thesis=true         code=8.8463063 
+[PASS] Eq. (4.3)          load per trip c/nu [mg]                              thesis=33.3         code=33.333333 
+[PASS] Eq. (4.5)          17 trips / nu [d]                                    thesis=5.7          code=5.6666667 
+[PASS] Eq. (4.5)          21 trips / nu [d]                                    thesis=7.0          code=7 
+[PASS] Eq. (4.5)          1/m0 inside [5.7, 7.0]                               thesis=true         code=True 
+[PASS] Eq. (4.6)          max mu = nu h0/(zeta e) [1/d]                        thesis=3.62e-4      code=3.624428e-04 
+[PASS] Eq. (4.6)          max mu / m0 [%]                                      thesis=0.235        code=0.23535247 
+[PASS] Eq. (4.6)          argmax p = 1/zeta                                    thesis=0.164        code=0.16420361 
+[PASS] Eq. (4.6)          argmax V                                             thesis=16.6         code=16.574753 
+[PASS] Eq. (4.6)          mu(V) <= bound on V in [0,60]                        thesis=true         code=True 
+[PASS] Sec. 4.3.3         zeta=6.03 raises bound by [%]                        thesis=1            code=0.99502488 
+[PASS] Sec. 4.3.3         zeta 6.03 moves no threshold by 0.001 hornets        thesis=true         code=2.509353e-04 
+[PASS] Sec. 4.6           p(5): traffic after five hornets                     thesis=0.58         code=0.57984178 
+[PASS] Sec. 4.6           p(10): traffic after ten hornets                     thesis=0.34         code=0.33621649 thesis: 'to a third'
+[PASS] Tab. A.4           max mu/m0 [%] for nu=3.0                             thesis=0.24         code=0.23535247 
+[PASS] Tab. A.4           max mu/m0 [%] for nu=2.91                            thesis=0.23         code=0.22829189 
+[PASS] Tab. A.4           max mu/m0 [%] for nu=24.0                            thesis=1.88         code=1.8828197 
+
+--- Reproduction of Khoury et al. 2013 (App. C) ---
+[PASS] App. C.1.2         P at m=0.42                                          thesis=3.5657       code=3.5657143 
+[PASS] App. C.1.2         denominator m/P + sigma/(1+P) - amin                 thesis=0.03206      code=0.032056296 
+[DIFF] App. C.1.2         X                                                    thesis=0.12824      code=0.12822519 (thesis divides the rounded 0.03206)
+[PASS] App. C.1.2         f* [g]                                               thesis=1303.7       code=1303.7235 
+[DIFF] App. C.1.2         s(f*)                                                thesis=0.87175      code=0.87177481 (exact 0.87178)
+[PASS] App. C.1.2         H*                                                   thesis=9802.4       code=9802.3805 
+[PASS] App. C.1.2         F*                                                   thesis=2749.1       code=2749.0651 
+[DIFF] App. C.1.2         B* = m F/phi                                         thesis=10391.6      code=10391.47 (thesis uses rounded F=2749.1)
+[PASS] App. C.1.3(a)      printed denominator (sign error)                     thesis=-0.20352     code=-0.20352063 
+[PASS] App. C.1.3(a)      printed formula has no real f                        thesis=true         code=True 
+[PASS] App. C.1.3(b)      A = c/gA - 1                                         thesis=13.2857      code=13.285714 
+[PASS] App. C.1.3(b)      correct m^2 coefficient                              thesis=157.04       code=157.04082 
+[PASS] App. C.1.3(b)      true quadratic, root 1                               thesis=0.4010       code=0.40103192 
+[PASS] App. C.1.3(b)      true quadratic, root 2                               thesis=0.5952       code=0.5951994 
+[PASS] App. C.1.3(b)      published quadratic, root 1                          thesis=-0.5766      code=-0.5765681 
+[PASS] App. C.1.3(b)      published quadratic, root 2                          thesis=0.7093       code=0.70928415 
+[PASS] Eq. (C.7)          (A8) = 31/54                                         thesis=0.5741       code=0.57407407 
+[PASS] Eq. (C.7)          (A8) equals 31/54 exactly                            thesis=true         code=True 
+[PASS] Tab. C.1           P = Q                                                thesis=0.4010       code=0.40103192 
+[PASS] Tab. C.1           H* = 0                                               thesis=0.4624       code=0.46240551 
+[PASS] Tab. C.1           denominator = amax                                   thesis=0.4888       code=0.48881622 
+[PASS] Tab. C.1           P = 0                                                thesis=0.5741       code=0.57407407 
+[PASS] Tab. C.1           binding order 0.4010 < 0.4624 < 0.4888 < 0.5741      thesis=true         code=True 
+[PASS] Eq. (C.8)          f*(m*) [g]                                           thesis=449.8        code=449.82064 
+[INFO] Eq. (C.2)          food-abundant F at m0 (A4)                           thesis=-            code=11222.35 
+
+--- Equilibrium cascade, existence band and thresholds (Sec. 5.1, 5.5) ---
+[PASS] Eq. (5.5)          J_Q                                                  thesis=0.352932     code=0.3529321 
+[PASS] Eq. (5.5)          Q                                                    thesis=2.8334       code=2.8334062 
+[PASS] Sec. 5.1.1         P at p=1                                             thesis=9.7217       code=9.7217143 
+[PASS] Sec. 5.1.1         Q as share of P [%]                                  thesis=29.1         code=29.145129 
+[PASS] Eq. (5.6)          p_acc                                                thesis=0.517818     code=0.51781843 
+[PASS] Eq. (5.6)          V_acc                                                thesis=6.04         code=6.0378956 
+[PASS] Eq. (5.6)          food-limitation boundary in m at p=1                 thesis=0.4010       code=0.40103192 
+[PASS] Prop. 5.6          s*                                                   thesis=0.281699     code=0.28169873 
+[PASS] Prop. 5.6          f_crit [g]                                           thesis=313.12       code=313.11879 
+[PASS] Prop. 5.6          J_c                                                  thesis=0.7317       code=0.731685 
+[PASS] Prop. 5.6          P_c                                                  thesis=1.3667       code=1.3667083 
+[PASS] Eq. (5.10)         p*                                                   thesis=0.415150     code=0.41514958 
+[PASS] Eq. (5.10)         V*                                                   thesis=8.07         code=8.0652879 
+[PASS] Cor. 5.8           m*                                                   thesis=0.4624055    code=0.46240551 
+[PASS] Cor. 5.8           m*/m0                                                thesis=3.00         code=3.0026332 
+[PASS] Cor. 5.8           m* - m0                                              thesis=0.3084       code=0.30840551 
+[PASS] Prop. 5.6          s*(m*)                                               thesis=0.447317     code=0.44731669 
+[PASS] Prop. 5.6          f_crit(m*) [g]                                       thesis=449.82       code=449.82064 
+[PASS] Prop. 5.5          equilibrium exists iff p* < p < p_acc (scan of 30001 p) thesis=true         code=True 
+[PASS] Prop. 5.5          upper bound of cond. 2 fails only below p*           thesis=true         code=0.39581162 
+[PASS] Prop. 5.5          condition 1 (P>0) holds on the band                  thesis=true         code=True 
+[PASS] Prop. 5.27         branch -> (0,0,f_crit) as p -> p*                    thesis=true         code=H=2.72e-04, f=313.1188 
+[PASS] Sec. 5.4.2         dH*/dp >= L c s(f*)/(m gA) on the band               thesis=true         code=True 
+[PASS] App. D.6           p*(m) strictly increasing                            thesis=true         code=True 
+[PASS] Sec. 6.3           p_acc(m) strictly increasing                         thesis=true         code=True 
+[PASS] Sec. 6.3           Q(m) increasing                                      thesis=true         code=True 
+[PASS] Rem. 5.29          f_crit independent of c, gA, gB                      thesis=true         code=True 
+[PASS] Eq. (5.16)         p_kappa                                              thesis=0.319480     code=0.31948 
+[PASS] Eq. (5.16)         V at p_kappa                                         thesis=10.47        code=10.468446 
+[PASS] Eq. (5.22)         p_E                                                  thesis=0.346430     code=0.34643 
+[PASS] Eq. (5.22)         V_E                                                  thesis=9.73         code=9.7254541 
+[PASS] Tab. 5.2           X for p_E = m v / L                                  thesis=0.385        code=0.385 
+[PASS] Tab. 5.2           X for p* = P_c                                       thesis=1.367        code=1.3667083 
+[PASS] Tab. 5.2           X for p_acc = Q                                      thesis=2.833        code=2.8334062 
+[PASS] Eq. (5.30)         p_X(0.000) reproduces threshold                      thesis=true         code=True 
+[PASS] Eq. (5.30)         p_X(0.385) reproduces threshold                      thesis=true         code=True 
+[PASS] Eq. (5.30)         p_X(1.367) reproduces threshold                      thesis=true         code=True 
+[PASS] Eq. (5.30)         p_X(2.833) reproduces threshold                      thesis=true         code=True 
+[PASS] Prop. 5.32         order p_kappa < p_E < p* < p_acc                     thesis=true         code=True 
+[PASS] Eq. (5.31)         window width p* - p_E                                thesis=0.0687       code=0.068719584 
+[PASS] Eq. (5.31)         closed form equals p* - p_E                          thesis=true         code=True 
+[PASS] Eq. (5.31)         window width in hornets                              thesis=1.66         code=1.6601662 
+[PASS] Prop. 5.33         a_c [g]                                              thesis=0.2241       code=0.22412311 
+[PASS] App. D.8           p_E(a_c) = p*                                        thesis=true         code=True 
+[PASS] Sec. 5.1.2         band width in hornets                                thesis=2            code=2.0273923 thesis: 'about two hornets wide'
+[PASS] Sec. 6.1           existence edge: activity falls by [%]                thesis=58           code=58.485042 
+
+--- Claims for all parameters: random-parameter tests ---
+[INFO] Thm. 5.10          random parameter sets with a positive equilibrium    thesis=-            code=1676 
+[PASS] Lem. 5.9           reduced trace (5.13) holds on all samples            thesis=true         code=1676/1676 
+[PASS] Thm. 5.10          determinant formula (5.15) on all samples            thesis=true         code=1676/1676 
+[PASS] Eq. (5.14)         reduced = analytic = numerical Jacobian              thesis=true         code=1676/1676 
+[PASS] Thm. 5.10          Routh-Hurwitz a1>0, a3>0, a1a2>a3 everywhere         thesis=true         code=1676/1676 
+[INFO] Thm. 5.10          smallest relative RH margin (a1a2-a3)/(a1a2)         thesis=-            code=0.93926569 
+[PASS] Prop. 5.32         order p_kap<p_E<p*<p_acc (sigma>amin+amax, L/v>amin) thesis=true         code=8959/8959 
+[PASS] Lem. 5.25          lambda strictly increasing, zero at f_crit           thesis=true         code=8959/8959 
+[PASS] App. D.6           p*(m) strictly increasing (sigma>amin+amax)          thesis=true         code=12532/12532 
+[PASS] Lem. 5.25 hyp.     L/v < amin can give s* >= 1 (no f_crit)              thesis=true         code=1.2979778 shows the hypothesis is not vacuous
+
+--- Local stability, relaxation and the delay model (Sec. 5.2, App. B.2) ---
+[PASS] Eq. (5.12)         analytic = numerical Jacobian, p=0.416               thesis=true         code=True 
+[PASS] Tab. 5.1           V at p=0.416                                         thesis=8.05         code=8.0465139 
+[PASS] Tab. 5.1           Re lambda_slow, p=0.416                              thesis=-0.000178    code=-1.775992e-04 
+[PASS] Tab. 5.1           relaxation [d], p=0.416                              thesis=5631         code=5630.655 
+[PASS] Thm. 5.10          RH at p=0.416                                        thesis=true         code=True 
+[PASS] Tab. 5.1           delay relaxation [d], p=0.416                        thesis=9576         code=9576.2738 
+[PASS] App. B.2           ||A0||+||A1|| < 3 at p=0.416                         thesis=true         code=0.75227754 
+[PASS] App. B.2           roots in Re>=0 / >=lD/2 / >=1.5lD: 0,0,1 (p=0.416)   thesis=true         code=0,0,1 
+[PASS] Eq. (5.12)         analytic = numerical Jacobian, p=0.43                thesis=true         code=True 
+[PASS] Tab. 5.1           V at p=0.43                                          thesis=7.74         code=7.7428447 
+[PASS] Tab. 5.1           Re lambda_slow, p=0.43                               thesis=-0.002826    code=-0.002825643 
+[PASS] Tab. 5.1           relaxation [d], p=0.43                               thesis=354          code=353.90175 
+[PASS] Thm. 5.10          RH at p=0.43                                         thesis=true         code=True 
+[PASS] Tab. 5.1           delay relaxation [d], p=0.43                         thesis=569          code=568.52486 
+[PASS] App. B.2           ||A0||+||A1|| < 3 at p=0.43                          thesis=true         code=2.0871205 
+[PASS] App. B.2           roots in Re>=0 / >=lD/2 / >=1.5lD: 0,0,1 (p=0.43)    thesis=true         code=0,0,1 
+[PASS] Eq. (5.12)         analytic = numerical Jacobian, p=0.45                thesis=true         code=True 
+[PASS] Tab. 5.1           V at p=0.45                                          thesis=7.33         code=7.3257587 
+[PASS] Tab. 5.1           Re lambda_slow, p=0.45                               thesis=-0.005673    code=-0.0056725044 
+[PASS] Tab. 5.1           relaxation [d], p=0.45                               thesis=176          code=176.28898 
+[PASS] Thm. 5.10          RH at p=0.45                                         thesis=true         code=True 
+[PASS] Tab. 5.1           delay relaxation [d], p=0.45                         thesis=263          code=262.52201 
+[PASS] App. B.2           ||A0||+||A1|| < 3 at p=0.45                          thesis=true         code=2.9642232 
+[PASS] App. B.2           roots in Re>=0 / >=lD/2 / >=1.5lD: 0,0,1 (p=0.45)    thesis=true         code=0,0,1 
+[PASS] Eq. (5.12)         analytic = numerical Jacobian, p=0.48                thesis=true         code=True 
+[PASS] Tab. 5.1           V at p=0.48                                          thesis=6.73         code=6.7336622 
+[PASS] Tab. 5.1           Re lambda_slow, p=0.48                               thesis=-0.007947    code=-0.0079469967 
+[PASS] Tab. 5.1           relaxation [d], p=0.48                               thesis=126          code=125.8337 
+[PASS] Thm. 5.10          RH at p=0.48                                         thesis=true         code=True 
+[PASS] Tab. 5.1           delay relaxation [d], p=0.48                         thesis=169          code=168.80872 
+[PASS] App. B.2           ||A0||+||A1|| < 3 at p=0.48                          thesis=true         code=2.1727791 
+[PASS] App. B.2           roots in Re>=0 / >=lD/2 / >=1.5lD: 0,0,1 (p=0.48)    thesis=true         code=0,0,1 
+[PASS] Eq. (5.12)         analytic = numerical Jacobian, p=0.51                thesis=true         code=True 
+[PASS] Tab. 5.1           V at p=0.51                                          thesis=6.18         code=6.177473 
+[PASS] Tab. 5.1           Re lambda_slow, p=0.51                               thesis=-0.004103    code=-0.0041029425 
+[PASS] Tab. 5.1           relaxation [d], p=0.51                               thesis=244          code=243.72752 
+[PASS] Thm. 5.10          RH at p=0.51                                         thesis=true         code=True 
+[PASS] Tab. 5.1           delay relaxation [d], p=0.51                         thesis=267          code=267.37709 
+[PASS] App. B.2           ||A0||+||A1|| < 3 at p=0.51                          thesis=true         code=0.89050296 
+[PASS] App. B.2           roots in Re>=0 / >=lD/2 / >=1.5lD: 0,0,1 (p=0.51)    thesis=true         code=0,0,1 
+[PASS] Eq. (5.12)         analytic = numerical Jacobian, p=0.517               thesis=true         code=True 
+[PASS] Tab. 5.1           V at p=0.517                                         thesis=6.05         code=6.0524074 
+[PASS] Tab. 5.1           Re lambda_slow, p=0.517                              thesis=-0.000206    code=-2.063387e-04 
+[PASS] Tab. 5.1           relaxation [d], p=0.517                              thesis=4846         code=4846.4014 
+[PASS] Thm. 5.10          RH at p=0.517                                        thesis=true         code=True 
+[PASS] Tab. 5.1           delay relaxation [d], p=0.517                        thesis=4863         code=4863.1276 
+[PASS] App. B.2           ||A0||+||A1|| < 3 at p=0.517                         thesis=true         code=0.86203861 
+[PASS] App. B.2           roots in Re>=0 / >=lD/2 / >=1.5lD: 0,0,1 (p=0.517)   thesis=true         code=0,0,1 
+[PASS] Sec. 4.4           delay relaxation up to x slower                      thesis=1.7          code=1.7007389 
+[PASS] Rem. 5.11          minimum relaxation on dense scan [d]                 thesis=124          code=124.35059 
+[PASS] Rem. 5.11          at p                                                 thesis=0.49         code=0.48608118 
+[PASS] Rem. 5.11          at V                                                 thesis=6.6          code=6.6181618 
+[PASS] Sec. 5.2.2         two eigenvalues -> 0 as p -> p*                      thesis=true         code=-4.17e-06, -2.10e-08 
+[PASS] Sec. 5.2.2         third eigenvalue near p*                             thesis=-0.587       code=-0.58710306 
+[PASS] App. B.2           nonlinear delay decay rate, p=0.45                   thesis=-0.0038092   code=-0.0038092189 six significant figures
+[PASS] App. B.2           nonlinear delay decay rate, p=0.48                   thesis=-0.00592386  code=-0.0059238811 six significant figures
+
+--- Energy budget, Lyapunov bound and global collapse (Sec. 5.3) ---
+[PASS] Lem. 5.12          budget identity (5.17) at 5000 random points         thesis=true         code=True 
+[PASS] Lem. 5.14          identity (5.18) for W_a                              thesis=true         code=True 
+[PASS] Lem. 5.14          absorption bound (5.20) for a <= a_star              thesis=true         code=True 
+[PASS] Lem. 5.14          bound fails for a > a_star (f large, H small)        thesis=true         code=7.179859e-08 
+[PASS] Rem. 5.16          best p with separate weights                         thesis=0.354        code=0.354515 
+[PASS] Rem. 5.16          corresponding V                                      thesis=9.5          code=9.5138039 
+[PASS] Rem. 5.16          beyond p_E by [%]                                    thesis=2            code=2.3338048 
+[PASS] Thm. 5.17          W nonincreasing along 8 runs with p < p_E            thesis=true         code=True 
+[PASS] Thm. 5.17          all 8 runs collapse (N < 1e-3)                       thesis=true         code=True 
+[PASS] Eq. (5.23)         forager-days <= W(0)/(c(p_E - p))                    thesis=true         code=0.33632031 
+[PASS] Tab. B.6           residual food at p=0.15                              thesis=104.5        code=104.49822 
+[PASS] Prop. 5.31         f_inf < f_crit at p=0.15                             thesis=true         code=True 
+[PASS] Tab. B.6           residual food at p=0.2                               thesis=172.1        code=172.07578 
+[PASS] Prop. 5.31         f_inf < f_crit at p=0.2                              thesis=true         code=True 
+[PASS] Tab. B.6           residual food at p=0.25                              thesis=216.0        code=216.02508 
+[PASS] Prop. 5.31         f_inf < f_crit at p=0.25                             thesis=true         code=True 
+[PASS] Tab. B.6           residual food at p=0.3                               thesis=250.6        code=250.61116 
+[PASS] Prop. 5.31         f_inf < f_crit at p=0.3                              thesis=true         code=True 
+[PASS] Tab. B.6           residual food at p=0.319                             thesis=262.2        code=262.24665 
+[PASS] Prop. 5.31         f_inf < f_crit at p=0.319                            thesis=true         code=True 
+[PASS] Fig. 5.1(b)        p=0.10: stores run out after [d]                     thesis=16           code=16.321422 
+[PASS] Fig. 5.1(b)        bees alive at exit                                   thesis=5800         code=5836.0167 
+[PASS] Fig. 5.1(b)        rationed: below one bee after [d]                    thesis=118          code=118.14985 
+[PASS] Sec. 5.3.4         end-state boundary p (exit below)                    thesis=0.1157       code=0.11570435 
+[PASS] Sec. 5.3.4         end-state boundary V                                 thesis=19.8         code=19.786395 
+[PASS] Sec. 5.3.4         p=0.25, min residual over A-D [g]                    thesis=216.0        code=216.02507 
+[DIFF] Sec. 5.3.4         p=0.25, max residual over A-D [g]                    thesis=229.5        code=239.26056 (state D; the thesis figure 229.5 must come from other initial states)
+[PASS] Rem. 5.21          (9000,100,5) at V=7.3: stores reach 0 within ~0.1 d  thesis=true         code=0.1008 
+[PASS] Rem. 5.21          rationed, V=7.3: recovers                            thesis=true         code=t_empty=0.27 d 
+[PASS] Rem. 5.21          (9000,100,5) at V=9.7: stores reach 0 within ~0.1 d  thesis=true         code=0.0937 
+[PASS] Rem. 5.21          rationed, V=9.7: collapses                           thesis=true         code=t_empty=0.45 d 
+[PASS] Rem. 5.21          (9000,100,5) at V=11.0: stores reach 0 within ~0.1 d thesis=true         code=0.0911 
+[PASS] Rem. 5.21          rationed, V=11.0: collapses                          thesis=true         code=t_empty=0.58 d 
+[PASS] Rem. 5.21          (20000,50,1) exits even at V=0                       thesis=true         code=True 
+[PASS] Rem. 5.21          rationed at V=0: recovers                            thesis=true         code=t_empty=0.14 d 
+[PASS] Rem. 5.21          shortest time on the empty comb [d]                  thesis=0.14         code=0.14270498 
+[PASS] Rem. 5.21          longest time on the empty comb [d]                   thesis=0.6          code=0.58004912 
+[PASS] Tab. B.7           p at V=8.1                                           thesis=0.4136       code=0.41358178 
+[PASS] Tab. B.7           V=8.1, state A: time to H+F<1 [d]                    thesis=16704        code=16703.74 
+[PASS] Tab. B.7           V=8.1, state B: time to H+F<1 [d]                    thesis=16565        code=16565.11 
+[PASS] Tab. B.7           V=8.1, state C: time to H+F<1 [d]                    thesis=16138        code=16138.04 
+[PASS] Tab. B.7           V=8.1, state D: time to H+F<1 [d]                    thesis=14591        code=14590.68 
+[PASS] Tab. B.7           V=8.1: residual food (state B) [g]                   thesis=312.3        code=312.34781 
+[INFO] Tab. B.7           V=8.1: residual food spread over A-D [g]             thesis=-            code=5.115908e-13 
+[PASS] Tab. B.7           p at V=8.5                                           thesis=0.3959       code=0.39593707 
+[PASS] Tab. B.7           V=8.5, state A: time to H+F<1 [d]                    thesis=2207         code=2206.7783 
+[PASS] Tab. B.7           V=8.5, state B: time to H+F<1 [d]                    thesis=2103         code=2102.7715 
+[PASS] Tab. B.7           V=8.5, state C: time to H+F<1 [d]                    thesis=1902         code=1901.5898 
+[PASS] Tab. B.7           V=8.5, state D: time to H+F<1 [d]                    thesis=1580         code=1580.4016 
+[PASS] Tab. B.7           V=8.5: residual food (state B) [g]                   thesis=303.8        code=303.77126 
+[INFO] Tab. B.7           V=8.5: residual food spread over A-D [g]             thesis=-            code=4.173179e-05 
+[PASS] Tab. B.7           p at V=9.0                                           thesis=0.3749       code=0.37493598 
+[PASS] Tab. B.7           V=9.0, state A: time to H+F<1 [d]                    thesis=1127         code=1126.7465 
+[PASS] Tab. B.7           V=9.0, state B: time to H+F<1 [d]                    thesis=1047         code=1046.7358 
+[PASS] Tab. B.7           V=9.0, state C: time to H+F<1 [d]                    thesis=924          code=924.08869 
+[PASS] Tab. B.7           V=9.0, state D: time to H+F<1 [d]                    thesis=778          code=777.72631 
+[PASS] Tab. B.7           V=9.0: residual food (state B) [g]                   thesis=293.2        code=293.15586 
+[INFO] Tab. B.7           V=9.0: residual food spread over A-D [g]             thesis=-            code=0.056424093 
+[PASS] Tab. B.7           p at V=9.5                                           thesis=0.3550       code=0.35504881 
+[PASS] Tab. B.7           V=9.5, state A: time to H+F<1 [d]                    thesis=770          code=769.82395 
+[PASS] Tab. B.7           V=9.5, state B: time to H+F<1 [d]                    thesis=704          code=704.44694 
+[PASS] Tab. B.7           V=9.5, state C: time to H+F<1 [d]                    thesis=616          code=616.2522 
+[PASS] Tab. B.7           V=9.5, state D: time to H+F<1 [d]                    thesis=536          code=536.49181 
+[PASS] Tab. B.7           V=9.5: residual food (state B) [g]                   thesis=282.6        code=282.64084 
+[INFO] Tab. B.7           V=9.5: residual food spread over A-D [g]             thesis=-            code=0.59352451 
+[PASS] Tab. B.7           p at V=9.72                                          thesis=0.3466       code=0.34663601 
+[PASS] Tab. B.7           V=9.72, state A: time to H+F<1 [d]                   thesis=678          code=677.89321 
+[PASS] Tab. B.7           V=9.72, state B: time to H+F<1 [d]                   thesis=617          code=617.3039 
+[PASS] Tab. B.7           V=9.72, state C: time to H+F<1 [d]                   thesis=539          code=538.86307 
+[PASS] Tab. B.7           V=9.72, state D: time to H+F<1 [d]                   thesis=478          code=477.82969 
+[PASS] Tab. B.7           V=9.72: residual food (state B) [g]                  thesis=278.0        code=278.04128 
+[INFO] Tab. B.7           V=9.72: residual food spread over A-D [g]            thesis=-            code=1.0989223 
+
+--- Food axis, band lemma, transverse growth rate (Sec. 5.4) ---
+[PASS] Lem. 5.23          u_-                                                  thesis=0.192        code=0.19171779 
+[PASS] Lem. 5.23          u^+                                                  thesis=0.553        code=0.55309735 
+[PASS] Lem. 5.23          H/F lower end 1/u^+ - 1                              thesis=0.81         code=0.808 
+[PASS] Lem. 5.23          H/F upper end 1/u_- - 1                              thesis=4.2          code=4.216 
+[PASS] Cor. 5.24          population bound L/(m u_-)                           thesis=68000        code=67740.26 
+[PASS] Prop. 5.22         N- and u-equations (5.25)-(5.26) exact               thesis=true         code=True 
+[PASS] Lem. 5.23          u enters [u_-, u^+] from u=0.001                     thesis=true         code=0.34506525 
+[PASS] Lem. 5.25          lambda(f_crit) = 0                                   thesis=true         code=True 
+[PASS] Tab. B.5           lambda analytic at f=250                             thesis=-0.027012    code=-0.027012195 
+[PASS] Tab. B.5           lambda measured at f=250                             thesis=-0.027012    code=-0.027012196 
+[PASS] Tab. B.5           |analytic - measured| < 5e-8 at f=250                thesis=true         code=5.344028e-10 
+[PASS] Tab. B.5           lambda analytic at f=313                             thesis=-0.000052    code=-5.233555e-05 
+[PASS] Tab. B.5           lambda measured at f=313                             thesis=-0.000052    code=-5.233846e-05 
+[PASS] Tab. B.5           |analytic - measured| < 5e-8 at f=313                thesis=true         code=2.913801e-09 
+[PASS] Tab. B.5           lambda analytic at f=400                             thesis=0.038377     code=0.038376924 
+[PASS] Tab. B.5           lambda measured at f=400                             thesis=0.038377     code=0.03837693 
+[PASS] Tab. B.5           |analytic - measured| < 5e-8 at f=400                thesis=true         code=6.194271e-09 
+[PASS] Tab. B.5           lambda analytic at f=600                             thesis=0.115474     code=0.11547415 
+[PASS] Tab. B.5           lambda measured at f=600                             thesis=0.115474     code=0.11547414 
+[PASS] Tab. B.5           |analytic - measured| < 5e-8 at f=600                thesis=true         code=1.196872e-08 
+[PASS] Tab. B.5           lambda analytic at f=800                             thesis=0.168960     code=0.1689602 
+[PASS] Tab. B.5           lambda measured at f=800                             thesis=0.168960     code=0.16896016 
+[PASS] Tab. B.5           |analytic - measured| < 5e-8 at f=800                thesis=true         code=4.129989e-08 
+[PASS] Sec. 5.4.1         shape relaxation rate at f_crit                      thesis=0.59         code=0.58710417 
+[PASS] Rem. 5.28          third eigenvalue -(1-u_c)(sigma+A+m0)                thesis=-0.587       code=-0.58710417 
+[PASS] App. D.3           alpha sigma at most                                  thesis=0.375        code=0.375 
+[PASS] App. D.3           (sigma+m0)^2 at least                                thesis=0.8172       code=0.817216 
+[PASS] Rem. 5.28          store drift G3 = c u_c (p - p*) at the critical point thesis=true         code=True 
+[PASS] Rem. 5.28          1/u_c = 1 + P_c                                      thesis=true         code=True 
+[PASS] Thm. 5.26          small colony at f0=200 < f_crit decays               thesis=true         code=-1.922630e-14 
+[PASS] Thm. 5.26          small colony at f0=450 > f_crit grows                thesis=true         code=124.0827 
+[PASS] Rem. 5.30          p=0.45: (60,25,200) dies, others -> equilibrium      thesis=true         code=True,True,True 
+[PASS] Rem. 5.30          p=0.48: (60,25,200) dies, others -> equilibrium      thesis=true         code=True,True,True 
+[PASS] Rem. 5.30          p=0.5: (60,25,200) dies, others -> equilibrium       thesis=true         code=True,True,True 
+[PASS] Prop. 5.33         dW_c <= bound (5.32) on f <= f_crit (5000 points)    thesis=true         code=True 
+[PASS] Prop. 5.33         a_c fails the global bound of Lemma 5.14             thesis=true         code=True 
+
+--- The two channels (Ch. 6, App. A.2) ---
+[PASS] Sec. 6.1           m at V=0                                             thesis=0.154014     code=0.15401359 
+[PASS] Sec. 6.1           m at V=16.6                                          thesis=0.154362     code=0.15436244 
+[PASS] Sec. 6.1           m at V=20                                            thesis=0.154341     code=0.15434073 
+[PASS] Sec. 6.1           p at V=20                                            thesis=0.113        code=0.11304153 
+[PASS] Sec. 6.1           excursion of m on [0,20]                             thesis=3.5e-4       code=3.488503e-04 
+[PASS] Tab. A.3           p(6.0)                                               thesis=0.520        code=0.51996176 
+[PASS] Tab. A.3           HF at V=6.0                                          thesis=8.43e-5      code=8.429608e-05 
+[PASS] Tab. A.3           nu p at V=6.0                                        thesis=1.56         code=1.5598853 
+[DIFF] Tab. A.3           mu at V=6.0                                          thesis=1.32e-4      code=1.314922e-04 
+[PASS] Tab. A.3           mu/m0 [%] at V=6.0                                   thesis=0.085        code=0.085384551 
+[PASS] Tab. A.3           p(8.07)                                              thesis=0.415        code=0.41493641 
+[PASS] Tab. A.3           HF at V=8.07                                         thesis=1.60e-4      code=1.598027e-04 
+[PASS] Tab. A.3           nu p at V=8.07                                       thesis=1.24         code=1.2448092 
+[PASS] Tab. A.3           mu at V=8.07                                         thesis=1.99e-4      code=1.989238e-04 
+[PASS] Tab. A.3           mu/m0 [%] at V=8.07                                  thesis=0.129        code=0.12917132 
+[PASS] Tab. A.3           p(12.6)                                              thesis=0.253        code=0.25324446 
+[PASS] Tab. A.3           HF at V=12.6                                         thesis=4.28e-4      code=4.277948e-04 
+[PASS] Tab. A.3           nu p at V=12.6                                       thesis=0.76         code=0.75973339 
+[PASS] Tab. A.3           mu at V=12.6                                         thesis=3.25e-4      code=3.250100e-04 
+[PASS] Tab. A.3           mu/m0 [%] at V=12.6                                  thesis=0.211        code=0.21104546 
+[PASS] Tab. A.3           p(16.6)                                              thesis=0.164        code=0.16375236 
+[DIFF] Tab. A.3           HF at V=16.6                                         thesis=7.37e-4      code=7.377836e-04 
+[PASS] Tab. A.3           nu p at V=16.6                                       thesis=0.49         code=0.49125708 
+[PASS] Tab. A.3           mu at V=16.6                                         thesis=3.62e-4      code=3.624414e-04 
+[PASS] Tab. A.3           mu/m0 [%] at V=16.6                                  thesis=0.235        code=0.23535158 
+[PASS] Tab. A.3           p(20.0)                                              thesis=0.113        code=0.11304153 
+[DIFF] Tab. A.3           HF at V=20.0                                         thesis=1.01e-3      code=0.0010047354 
+[PASS] Tab. A.3           nu p at V=20.0                                       thesis=0.34         code=0.33912459 
+[PASS] Tab. A.3           mu at V=20.0                                         thesis=3.41e-4      code=3.407305e-04 
+[PASS] Tab. A.3           mu/m0 [%] at V=20.0                                  thesis=0.221        code=0.22125357 
+[PASS] Rem. 4.1           mu raises each threshold by at most 0.0005 in p      thesis=true         code=0.00045 
+[PASS] Rem. 4.1           largest shift in hornets                             thesis=0.01         code=0.011956957 
+[PASS] Sec. 6.2 Q1        p* with mu carried                                   thesis=0.4155       code=0.4155328 
+[PASS] Sec. 6.2 Q1        shift of V* [hornets]                                thesis=0.01         code=0.0084646344 
+[PASS] Sec. 6.2 Q1        HF x3: shift of V* [hornets]                         thesis=0.03         code=0.025298249 
+[PASS] Sec. 6.2 Q1        HF x12: shift of V* [hornets]                        thesis=0.10         code=0.099512806 
+[PASS] Sec. 6.2 Q2        V* - 1                                               thesis=7.07         code=7.0652879 
+[PASS] Sec. 6.2 Q2        required Delta m                                     thesis=0.025        code=0.024825782 
+[PASS] Sec. 6.2 Q2        trips per day nu p                                   thesis=1.39         code=1.3888776 
+[PASS] Sec. 6.2 Q2        required capture rate [%]                            thesis=1.8          code=1.7874709 
+[PASS] Sec. 6.2 Q2        one flight in                                        thesis=56           code=55.944967 
+[PASS] Sec. 6.2 Q2        times highest fitted rate h0                         thesis=9            code=8.9373545 
+[PASS] Sec. 6.2 Q2        foragers at resting state (V*-1)                     thesis=6900         code=6856.286 
+[PASS] Sec. 6.2 Q2        bees lost per day                                    thesis=170          code=170.21266 
+[PASS] Sec. 6.2 Q2        capture rate for V_acc [%]                           thesis=1.75         code=1.7487528 
+[PASS] Sec. 6.2 Q2        capture rate for V_E [%]                             thesis=1.9          code=1.9177267 
+[PASS] Sec. 6.2 Q3        capture rate at full traffic [%]                     thesis=10.3         code=10.280184 
+[PASS] Eq. (6.4)          (m* - m0) / max mu                                   thesis=851          code=850.90809 
+[PASS] Sec. 6.2 Q3        nu h0 [1/d]                                          thesis=0.006        code=0.006 
+[PASS] Sec. 6.2 Q3        (m* - m0)/(nu h0)                                    thesis=51           code=51.400918 
+[PASS] Sec. 6.2 Q3        zeta e                                               thesis=17           code=16.554336 
+[PASS] Sec. 6.2 Q3        851 = 51 x 17 exactly                                thesis=true         code=True 
+[PASS] Sec. 6.2 Q3        (0.401 - m0)/max mu                                  thesis=680          code=681.57491 
+[PASS] App. A.2           captures per day                                     thesis=12.6         code=12.6 
+[PASS] App. A.2           foragers needed at the bound                         thesis=35000        code=34764.11 
+[PASS] App. A.2           mu_obs at 11000 foragers                             thesis=1.1e-3       code=0.0011454545 
+[PASS] App. A.2           mu_obs at 3000 foragers                              thesis=4.2e-3       code=0.0042 
+[PASS] App. A.2           mu_obs / m0 low [%]                                  thesis=0.7          code=0.74380165 
+[PASS] App. A.2           mu_obs / m0 high [%]                                 thesis=2.7          code=2.7272727 
+[PASS] App. A.2           times the bound, low                                 thesis=3            code=3.1603733 
+[PASS] App. A.2           times the bound, high                                thesis=12           code=11.588035 
+[PASS] App. A.2           shortfall factor, high mu_obs                        thesis=73           code=73.429883 
+[PASS] App. A.2           shortfall factor, low mu_obs                         thesis=270          code=269.24291 
+[PASS] App. A.2           mean homing failure                                  thesis=4.2e-4       code=4.213497e-04 
+[PASS] App. A.2           activity where HF reaches it                         thesis=0.26         code=0.25573715 
+[PASS] App. A.2           trips per day there                                  thesis=0.77         code=0.76721146 
+[PASS] App. A.2           implied foragers                                     thesis=39000        code=39102.65 
+[PASS] App. A.2           598078 / 2                                           thesis=299039       code=299039.00 
+[PASS] Sec. 7.2           seconds of flight for 1e-5/s to equal max mu         thesis=36           code=36.24428 
+
+--- Sensitivity: beta, forage quality, theta, m0, (p,m) plane (Sec. 6.3, App. A-B) ---
+[PASS] Tab. 6.1           V_acc at beta=0.087                                  thesis=7.56         code=7.5647197 
+[PASS] Tab. 6.1           V* at beta=0.087                                     thesis=10.10        code=10.104786 
+[PASS] Tab. 6.1           V_E at beta=0.087                                    thesis=12.18        code=12.184764 
+[PASS] Tab. 6.1           V_acc at beta=0.107                                  thesis=6.15         code=6.1507534 
+[PASS] Tab. 6.1           V* at beta=0.107                                     thesis=8.22         code=8.2160409 
+[PASS] Tab. 6.1           V_E at beta=0.107                                    thesis=9.91         code=9.9072383 
+[PASS] Tab. 6.1           V_acc at beta=0.109                                  thesis=6.04         code=6.0378956 
+[PASS] Tab. 6.1           V* at beta=0.109                                     thesis=8.07         code=8.0652879 
+[PASS] Tab. 6.1           V_E at beta=0.109                                    thesis=9.73         code=9.7254541 
+[PASS] Tab. 6.1           V_acc at beta=0.12                                   thesis=5.48         code=5.4844218 
+[PASS] Tab. 6.1           V* at beta=0.12                                      thesis=7.33         code=7.3259698 
+[PASS] Tab. 6.1           V_E at beta=0.12                                     thesis=8.83         code=8.8339542 
+[PASS] Tab. 6.1           V_acc at beta=0.131                                  thesis=5.02         code=5.0238978 
+[PASS] Tab. 6.1           V* at beta=0.131                                     thesis=6.71         code=6.7108121 
+[PASS] Tab. 6.1           V_E at beta=0.131                                    thesis=8.09         code=8.0921718 
+[PASS] Tab. 6.1           beta -20 %                                           thesis=0.087        code=0.08784 
+[PASS] Tab. 6.1           beta +20 %                                           thesis=0.131        code=0.13176 
+[PASS] Rem. 6.1           thresholds in p scale exactly as 1/c                 thesis=true         code=True 
+[PASS] Rem. 6.1           20 % richer site buys [hornets]                      thesis=1.7          code=1.6726748 
+[PASS] Rem. 6.1           twice as rich buys [hornets]                         thesis=6.4          code=6.3591484 
+[PASS] Tab. 6.2           p_acc at theta=0.0                                   thesis=0.5181       code=0.51807975 
+[PASS] Tab. 6.2           V_acc at theta=0.0                                   thesis=6.03         code=6.0332669 
+[PASS] Tab. 6.2           p_star at theta=0.0                                  thesis=0.4155       code=0.4155328 
+[PASS] Tab. 6.2           V_star at theta=0.0                                  thesis=8.06         code=8.0568233 
+[PASS] Tab. 6.2           p_E at theta=0.0                                     thesis=0.3469       code=0.3468818 
+[PASS] Tab. 6.2           V_E at theta=0.0                                     thesis=9.71         code=9.7134972 
+[PASS] Tab. 6.2           p_acc at theta=0.25                                  thesis=0.4785       code=0.47848578 
+[PASS] Tab. 6.2           V_acc at theta=0.25                                  thesis=6.76         code=6.7626494 
+[PASS] Tab. 6.2           p_star at theta=0.25                                 thesis=0.3685       code=0.36852934 
+[PASS] Tab. 6.2           V_star at theta=0.25                                 thesis=9.16         code=9.1581188 
+[PASS] Tab. 6.2           p_E at theta=0.25                                    thesis=0.2985       code=0.29847114 
+[PASS] Tab. 6.2           V_E at theta=0.25                                    thesis=11.09        code=11.092496 
+[PASS] Tab. 6.2           p_acc at theta=0.5                                   thesis=0.4316       code=0.43164743 
+[PASS] Tab. 6.2           V_acc at theta=0.5                                   thesis=7.71         code=7.7077629 
+[PASS] Tab. 6.2           p_star at theta=0.5                                  thesis=0.3128       code=0.31281116 
+[PASS] Tab. 6.2           V_star at theta=0.5                                  thesis=10.66        code=10.661978 
+[PASS] Tab. 6.2           p_E at theta=0.5                                     thesis=0.2423       code=0.24230133 
+[PASS] Tab. 6.2           V_E at theta=0.5                                     thesis=13.01        code=13.005258 
+[PASS] Tab. 6.2           p_acc at theta=0.75                                  thesis=0.3753       code=0.37527463 
+[PASS] Tab. 6.2           V_acc at theta=0.75                                  thesis=8.99         code=8.9917173 
+[PASS] Tab. 6.2           p_star at theta=0.75                                 thesis=0.2452       code=0.24516144 
+[PASS] Tab. 6.2           V_star at theta=0.75                                 thesis=12.90        code=12.897599 
+[PASS] Tab. 6.2           p_E at theta=0.75                                    thesis=0.1763       code=0.17630928 
+[PASS] Tab. 6.2           V_E at theta=0.75                                    thesis=15.92        code=15.922161 
+[PASS] Tab. 6.2           p_acc at theta=1.0                                   thesis=0.3059       code=0.30587957 
+[PASS] Tab. 6.2           V_acc at theta=1.0                                   thesis=10.87        code=10.867558 
+[PASS] Tab. 6.2           p_star at theta=1.0                                  thesis=0.1590       code=0.15903158 
+[PASS] Tab. 6.2           V_star at theta=1.0                                  thesis=16.87        code=16.868371 
+[PASS] Tab. 6.2           p_E at theta=1.0                                     thesis=0.0975       code=0.097544119 
+[PASS] Tab. 6.2           V_E at theta=1.0                                     thesis=21.35        code=21.352757 
+[PASS] Sec. 6.3           each edge grows along m(p) with slope < 0.4 (unique fixed point) thesis=true         code=True 
+[PASS] Tab. 6.2 cap.      tilde p_E                                            thesis=0.0967       code=0.09674254 
+[PASS] Tab. 6.2 cap.      tilde V_E                                            thesis=21.4         code=21.428459 
+[PASS] Tab. 6.2 cap.      tilde p_acc (closed form)                            thesis=0.3051       code=0.30505077 
+[PASS] Tab. 6.2 cap.      tilde V_acc                                          thesis=10.9         code=10.89245 
+[PASS] Tab. 6.2 cap.      closed form = fixed point without HF                 thesis=true         code=True 
+[PASS] Tab. 6.2 cap.      dropping HF at theta=1 moves each result < 0.1 hornets thesis=true         code=0.075702344 
+[PASS] Sec. 6.3           theta at which V_E = 20                              thesis=0.95         code=0.95439367 
+[PASS] Tab. A.2           V_acc, flightspan 8.8 d                              thesis=7.56         code=7.5582507 
+[PASS] Tab. A.2           V*, flightspan 8.8 d                                 thesis=9.96         code=9.9642822 
+[PASS] Tab. A.2           V_E, flightspan 8.8 d                                thesis=11.86        code=11.856244 
+[PASS] Tab. A.2           f_crit, flightspan 8.8 d                             thesis=281.6        code=281.59373 
+[PASS] Tab. A.2           ratio, flightspan 8.8 d                              thesis=961          code=961.27033 
+[PASS] Tab. A.2           1/8.8 rounded                                        thesis=0.114        code=0.11363636 
+[PASS] Tab. A.2           V_acc, flightspan 7.5 d                              thesis=6.80         code=6.8035833 
+[PASS] Tab. A.2           V*, flightspan 7.5 d                                 thesis=9.01         code=9.0105805 
+[PASS] Tab. A.2           V_E, flightspan 7.5 d                                thesis=10.78        code=10.782312 
+[PASS] Tab. A.2           f_crit, flightspan 7.5 d                             thesis=297.4        code=297.44373 
+[PASS] Tab. A.2           ratio, flightspan 7.5 d                              thesis=909          code=908.84827 
+[PASS] Tab. A.2           1/7.5 rounded                                        thesis=0.133        code=0.13333333 
+[PASS] Tab. A.2           V_acc, flightspan 6.7 d                              thesis=6.21         code=6.2143103 
+[PASS] Tab. A.2           V*, flightspan 6.7 d                                 thesis=8.28         code=8.2812613 
+[PASS] Tab. A.2           V_E, flightspan 6.7 d                                thesis=9.97         code=9.9662671 
+[PASS] Tab. A.2           f_crit, flightspan 6.7 d                             thesis=309.5        code=309.53796 
+[PASS] Tab. A.2           ratio, flightspan 6.7 d                              thesis=865          code=864.70337 
+[PASS] Tab. A.2           1/6.7 rounded                                        thesis=0.149        code=0.14925373 
+[PASS] Tab. A.2           V_acc, flightspan 6.5 d                              thesis=6.04         code=6.0378956 
+[PASS] Tab. A.2           V*, flightspan 6.5 d                                 thesis=8.07         code=8.0652879 
+[PASS] Tab. A.2           V_E, flightspan 6.5 d                                thesis=9.73         code=9.7254541 
+[PASS] Tab. A.2           f_crit, flightspan 6.5 d                             thesis=313.1        code=313.11879 
+[PASS] Tab. A.2           ratio, flightspan 6.5 d                              thesis=851          code=850.90809 
+[PASS] Tab. A.2           1/6.5 rounded                                        thesis=0.154        code=0.15384615 
+[PASS] Tab. B.4           p* at m=0.154                                        thesis=0.4151       code=0.41514958 
+[PASS] Tab. B.4           p_acc at m=0.154                                     thesis=0.5178       code=0.51781843 
+[PASS] Tab. B.4           width at m=0.154                                     thesis=0.1027       code=0.10266885 
+[PASS] Tab. B.4           p_E at m=0.154                                       thesis=0.3464       code=0.34643 
+[PASS] Tab. B.4           p* at m=0.2                                          thesis=0.5036       code=0.50356856 
+[PASS] Tab. B.4           p_acc at m=0.2                                       thesis=0.6083       code=0.60829273 
+[PASS] Tab. B.4           width at m=0.2                                       thesis=0.1047       code=0.10472418 
+[PASS] Tab. B.4           p_E at m=0.2                                         thesis=0.4290       code=0.429 
+[PASS] Tab. B.4           p* at m=0.25                                         thesis=0.5990       code=0.59898559 
+[PASS] Tab. B.4           p_acc at m=0.25                                      thesis=0.7062       code=0.70619429 
+[PASS] Tab. B.4           width at m=0.25                                      thesis=0.1072       code=0.10720871 
+[PASS] Tab. B.4           p_E at m=0.25                                        thesis=0.5187       code=0.51875 
+[PASS] Tab. B.4           p* at m=0.3                                          thesis=0.6939       code=0.69389574 
+[PASS] Tab. B.4           p_acc at m=0.3                                       thesis=0.8037       code=0.80373504 
+[PASS] Tab. B.4           width at m=0.3                                       thesis=0.1098       code=0.1098393 
+[PASS] Tab. B.4           p_E at m=0.3                                         thesis=0.6085       code=0.6085 
+[PASS] Tab. B.4           p* at m=0.35                                         thesis=0.7884       code=0.78843196 
+[PASS] Tab. B.4           p_acc at m=0.35                                      thesis=0.9010       code=0.90098621 
+[PASS] Tab. B.4           width at m=0.35                                      thesis=0.1126       code=0.11255425 
+[PASS] Tab. B.4           p_E at m=0.35                                        thesis=0.6982       code=0.69825 
+[PASS] Tab. B.4           p* at m=0.401                                        thesis=0.8846       code=0.88456336 
+[PASS] Tab. B.4           p_acc at m=0.401                                     thesis=1.0000       code=0.99993814 
+[PASS] Tab. B.4           width at m=0.401                                     thesis=0.1154       code=0.11537478 
+[PASS] Tab. B.4           p_E at m=0.401                                       thesis=0.7898       code=0.789795 
+[PASS] Tab. B.4           p* at m=0.4624                                       thesis=1.0000       code=0.99998965 
+[PASS] Tab. B.4           p_acc at m=0.4624                                    thesis=1.1188       code=1.1187992 
+[PASS] Tab. B.4           width at m=0.4624                                    thesis=0.1188       code=0.11880959 
+[PASS] Tab. B.4           p_E at m=0.4624                                      thesis=0.9000       code=0.900008 
+
+--- Season store-balance load (Sec. 6.4, Tab. 6.3) ---
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=70, A)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=70, A                     thesis=5.53         code=5.5317366 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=70, B)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=70, B                     thesis=5.67         code=5.6669538 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=70, C)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=70, C                     thesis=6.01         code=6.0108053 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=70, D)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=70, D                     thesis=5.92         code=5.9209048 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=70, A)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=70, A                   thesis=5.50         code=5.4996496 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=70, B)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=70, B                   thesis=5.59         code=5.5948478 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=70, C)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=70, C                   thesis=5.80         code=5.7976834 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=70, D)              thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=70, D                   thesis=6.14         code=6.1415364 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=150, A)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=150, A                    thesis=5.83         code=5.827776 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=150, B)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=150, B                    thesis=6.23         code=6.2281342 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=150, C)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=150, C                    thesis=6.78         code=6.7778816 
+[PASS] Tab. 6.3           one sign change on V=0..20 (M, T=150, D)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, (M), T=150, D                    thesis=6.79         code=6.7869663 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=150, A)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=150, A                  thesis=5.80         code=5.8024648 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=150, B)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=150, B                  thesis=6.14         code=6.1442239 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=150, C)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=150, C                  thesis=6.54         code=6.5421785 
+[PASS] Tab. 6.3           one sign change on V=0..20 (D, T=150, D)             thesis=true         code=1 
+[PASS] Tab. 6.3           store-balance load, delay, T=150, D                  thesis=6.49         code=6.488692 
+[PASS] Sec. 6.4           all store-balance loads within [5.5, 6.8]            thesis=true         code=5.50-6.79 
+[PASS] Sec. 6.4           V_acc = 6.04 inside that range                       thesis=true         code=True 
+[PASS] Sec. 6.4           delay moves the load by at most 0.3 hornets          thesis=true         code=0.29827424 
+[PASS] Sec. 6.4           within a hornet of V_acc                             thesis=true         code=True 
+
+--- Delay model: collapse, W_D, finite-horizon thresholds (Thm. 5.20, App. B.2, D.7) ---
+[PASS] App. D.7           delay model collapses within 4000 d at V=11          thesis=true         code=9.334401e-27 
+[PASS] App. D.7           W_D never increases along the computed solution      thesis=true         code=0 
+[PASS] Thm. 5.20          f stays >= 0 along that solution                     thesis=true         code=224.37786 
+[INFO] App. D.7           runtime [s]                                          thesis=-            code=1.0083263 
+[PASS] Rem. D.1           budget identity in the delay model with pupae        thesis=true         code=True 
+[INFO] Tab. B.3           finite-horizon thresholds skipped                    thesis=-            code=run without --quick 
