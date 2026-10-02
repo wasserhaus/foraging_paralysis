@@ -45,23 +45,23 @@ In one sentence: **a hornet does not need to kill bees to kill a colony.**
 The analysis works with a three-dimensional reduction (M) of the published delay model. Its state is the number of
 hive bees $H$, foragers $F$ and the food stores $f$ (in grams), with $N = H + F$:
 
-$$
+```math
 \begin{aligned}
 \dot H &= L\,s(f)\,\frac{H}{H+v} \;-\; H\Big(\alpha(f) - \sigma\frac{F}{N}\Big),\\
 \dot F &= H\Big(\alpha(f) - \sigma\frac{F}{N}\Big) \;-\; m\,F,\\
 \dot f &= c\,p\,F \;-\; \gamma_A N \;-\; \kappa\,L\,s(f)\,\frac{H}{H+v},
 \end{aligned}
-$$
+```
 
-with brood survival $s(f) = f^2/(f^2+b^2)$, food-dependent recruitment $\alpha(f) = \alpha_{\min} + \alpha_{\max}\,(1 - s(f))$
+with brood survival $s(f) = f^2/(f^2+b^2)$, food-dependent recruitment $\alpha(f) = \alpha_{\min} + \alpha_{\max}(1 - s(f))$
 and the honey cost per reared bee $\kappa = \gamma_B/\phi$.
 
 The hornet load $V$ enters at exactly two places:
 
 | Channel | Where it acts | Calibration (Requier et al. 2019) |
 |---|---|---|
-| **Paralysis** | food intake $c \to c\,p(V)$ | $p(V) = e^{-\beta V}$, $\beta = 0.109$ |
-| **Predation** | forager mortality $m_0 \to m_0 + \mu(V)$ | $\mu = \nu\,p\,\mathrm{HF}(p)$, $\mathrm{HF}(p) = h_0 e^{-\zeta p}$ |
+| **Paralysis** | food intake $c \to c p(V)$ | $p(V) = e^{-\beta V}$, $\beta = 0.109$ |
+| **Predation** | forager mortality $m_0 \to m_0 + \mu(V)$ | $\mu = \nu p \mathrm{HF}(p)$, $\mathrm{HF}(p) = h_0 e^{-\zeta p}$ |
 
 ![schema_bio](schema_bio.png)
 
@@ -119,9 +119,9 @@ Basins of attraction inside the band. $f_{\rm crit}$ decides the fate of tiny co
 
 The gap between what predation would need and what it can deliver splits into two factors:
 
-$$
-\frac{m^* - m_0}{\max_V \mu} \;=\; \underbrace{\frac{m^* - m_0}{\nu h_0}}_{\approx\,51\ \text{(captures are rare)}} \cdot \underbrace{\zeta e}_{\approx\,17\ \text{(paralysis throttles them)}} \;\approx\; 851 .
-$$
+```math
+\frac{m^* - m_0}{\max_V \mu} \;=\; \underbrace{\frac{m^* - m_0}{\nu h_0}}_{\approx\,51\ \text{(captures are rare)}} \cdot \underbrace{\zeta e}_{\approx\,17\ \text{(paralysis throttles them)}} \;\approx\; 851
+```
 
 ## Limitations
 
@@ -138,7 +138,7 @@ $$
 |---|---|
 | [`thesis_notebook.ipynb`](thesis_notebook.ipynb) | Chapter-by-chapter walk-through: every central number is recomputed and compared with the thesis, every figure is produced. GitHub shows it with all outputs. |
 | [`thesis_code.py`](thesis_code.py) | The library: model, equilibrium cascade, thresholds, stability, simulations with rationing, delay-model solver, figures and a verification report with 527 checks. |
-| [`figs/`](figs) | All figures as PDF (for LaTeX) and PNG. |
+| `*.png`, `*.pdf` | All figures as PNG and as PDF (for LaTeX). |
 | [`verification_report.txt`](verification_report.txt) | Output of the full verification against the printed values of the thesis. |
 
 ### Running the code
