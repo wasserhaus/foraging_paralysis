@@ -7,7 +7,7 @@ Author: Anton Fritzler · Supervisor: Prof. Dr. Christina Kuttler
 
 📄 [Read the thesis (PDF)](thesis.pdf) · 📓 [Walk through the computations](thesis_notebook.ipynb) · 🐍 [Library code](thesis_code.py)
 
-<p align="center"><img src="figs/ladder.png" width="85%"></p>
+<p align="center"><img src="ladder.png" width="85%"></p>
 
 ## The short version
 
